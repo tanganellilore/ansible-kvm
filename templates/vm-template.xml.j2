@@ -47,6 +47,9 @@
       <source {{ int['type'] }}='{{ int['source'] }}' portgroup='{{ int['portgroup'] }}'/>
 {%   endif %}
       <model type='{{ int['network_driver'] }}'/>
+{%   if int['driver'] is defined %}
+      <driver type='{{ int['driver'] }}'/>
+{%   endif %}
     </interface>
 {% endfor %}
     <console type='pty'>
