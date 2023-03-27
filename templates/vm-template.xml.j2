@@ -48,7 +48,7 @@
 {%   endif %}
       <model type='{{ int['network_driver'] }}'/>
 {%   if int['driver'] is defined %}
-      <driver type='{{ int['driver'] }}'/>
+      <driver name='{{ int['driver'] }}'/>
 {%   endif %}
     </interface>
 {% endfor %}
